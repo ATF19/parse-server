@@ -2,12 +2,6 @@
 // Basically promise-friendly wrappers for bcrypt.
 var bcrypt = require('bcryptjs');
 
-try {
-  bcrypt = require('bcrypt');
-} catch (e) {
-  /* */
-}
-
 // Returns a promise for a hashed password string.
 function hash(password) {
   return bcrypt.hash(password, 10);
